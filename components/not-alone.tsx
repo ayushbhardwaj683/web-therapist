@@ -9,8 +9,8 @@ export default function NotAlone() {
   return (
     <section className="bg-[#F0ECE6] text-[#3B3632]">
       <div className="flex flex-col md:grid md:grid-cols-2">
-
-        <ScrollAnimator className="relative w-full h-[260px] sm:h-[320px] md:h-auto md:min-h-screen">
+<div className="relative w-full h-[260px] sm:h-[320px] md:h-auto md:min-h-screen">
+        <ScrollAnimator >
           <div className="relative w-full h-full">
             <div className="absolute inset-0 bg-[#3B3632]/5 mix-blend-multiply z-10"></div>
             <img
@@ -20,6 +20,7 @@ export default function NotAlone() {
             />
           </div>
         </ScrollAnimator>
+</div>
 
         <div className="bg-[#dcd8d0] flex flex-col justify-between md:min-h-screen">
 

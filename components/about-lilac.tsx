@@ -38,8 +38,8 @@ export default function AboutLilac() {
             </div>
           </ScrollAnimator>
 
-
-          <ScrollAnimator delay={100} className="w-full flex justify-center md:justify-end">
+<div className="w-full flex justify-center md:justify-end">
+          <ScrollAnimator delay={100} >
             
             <div className="relative w-full md:max-w-md h-[500px] md:h-[700px] rounded-t-[10rem] md:rounded-t-full rounded-b-none overflow-hidden border-b-0 border border-[#3B3632]/10 shadow-xl md:translate-x-6">
 
@@ -52,8 +52,9 @@ export default function AboutLilac() {
                 className="w-full h-full object-cover object-top"
               />
             </div>
+          
           </ScrollAnimator>
-
+</div>
         </div>
       </div>
     </section>

@@ -20,8 +20,8 @@ export default function LetsConnect() {
           </ScrollAnimator>
 
           <div className="flex flex-col gap-16">
-
-            <ScrollAnimator className="w-full">
+<div className="w-full">
+            <ScrollAnimator >
               <div className="space-y-8 max-w-5xl">
 
                
@@ -50,7 +50,7 @@ export default function LetsConnect() {
 
               </div>
             </ScrollAnimator>
-
+</div>
           </div>
         </div>
       </div>

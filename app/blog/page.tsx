@@ -45,8 +45,8 @@ export default function BlogPage() {
   <div className="max-w-7xl mx-auto px-6 lg:px-12">
     <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-24">
 
-
-      <ScrollAnimator className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+<div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+      <ScrollAnimator>
         <div className="relative w-[280px] sm:w-[340px] lg:w-[391px] 
                         aspect-[2/3] 
                         rounded-t-[10rem] lg:rounded-t-[12rem] 
@@ -61,9 +61,9 @@ export default function BlogPage() {
           />
         </div>
       </ScrollAnimator>
-
-
-      <ScrollAnimator className="w-full lg:w-1/2 text-center lg:text-left">
+</div>
+<div className="w-full lg:w-1/2 text-center lg:text-left">
+      <ScrollAnimator >
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-serif font-bold text-[#3B3632] mb-8 leading-tight">
           Dr. Maya's Blog
         </h1>
@@ -78,7 +78,7 @@ export default function BlogPage() {
           Supporting deeper understanding and emotional resilience.
         </p>
       </ScrollAnimator>
-
+</div>
     </div>
   </div>
 </section>
@@ -241,3 +241,9 @@ export default function BlogPage() {
           </main>
   )
 }
+
+
+
+
+
+

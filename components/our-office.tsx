@@ -22,7 +22,8 @@ export default function OurOffice() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-24">
           
           {/* Card 1 */}
-          <ScrollAnimator delay={0} className="h-full">
+          <div className="h-full">
+          <ScrollAnimator delay={0} >
             <div className="flex flex-col h-full">
               <div className="w-full h-64 md:h-80 mb-8 bg-[#E6E2DC] overflow-hidden">
                 <img 
@@ -39,9 +40,11 @@ export default function OurOffice() {
               </p>
             </div>
           </ScrollAnimator>
+          </div>
 
           {/* Card 2 */}
-          <ScrollAnimator delay={100} className="h-full">
+          <div className="h-full">
+          <ScrollAnimator delay={100}>
             <div className="flex flex-col h-full">
               
               <div className="w-full h-64 md:h-80 mb-8 bg-[#E6E2DC] overflow-hidden">
@@ -59,9 +62,10 @@ export default function OurOffice() {
               </p>
             </div>
           </ScrollAnimator>
-
+</div>
           {/* Card 3 */}
-          <ScrollAnimator delay={200} className="h-full">
+          <div className="h-full">
+          <ScrollAnimator delay={200}>
             <div className="flex flex-col h-full"> 
               <div className="w-full h-64 md:h-80 mb-8 bg-[#E6E2DC] overflow-hidden">
                 <img 
@@ -78,6 +82,7 @@ export default function OurOffice() {
               </p>
             </div>
           </ScrollAnimator>
+          </div>
         </div>
 
        

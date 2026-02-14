@@ -41,8 +41,8 @@ export default function Hero() {
           </a>
         </ScrollAnimator>
       </div>
-
-      <ScrollAnimator delay={100} className="h-full w-full">
+<div  className="h-full w-full">
+      <ScrollAnimator delay={100}>
         <div className="relative w-full h-[400px] md:h-full bg-[#E6E2DC]">
           <img 
             src="/fulfilling.jpg" 
@@ -51,6 +51,7 @@ export default function Hero() {
           />
         </div>
       </ScrollAnimator>
+      </div>
     </section>
   )
 }

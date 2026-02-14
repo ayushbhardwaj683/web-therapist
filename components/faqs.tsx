@@ -35,7 +35,8 @@ export default function Faqs() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start">
           
           {/* Left - Arch Image */}
-          <ScrollAnimator className="order-2 md:order-1 w-full flex justify-center md:justify-start">
+          <div className="order-2 md:order-1 w-full flex justify-center md:justify-start">
+          <ScrollAnimator >
             <div className="relative w-full md:max-w-md h-[500px] md:h-[650px] rounded-t-[12rem] md:rounded-t-full rounded-b-none overflow-hidden shadow-lg border border-[#3B3632]/10">
               
               <div className="absolute inset-0 bg-[#3B3632]/5 mix-blend-multiply z-10 pointer-events-none"></div>
@@ -46,7 +47,8 @@ export default function Faqs() {
                 className="w-full h-full object-cover"
               />
             </div>
-          </ScrollAnimator>
+          </ScrollAnimator></div>
+
 
           {/* Right - FAQs Content */}
           <div className="order-1 md:order-2 flex flex-col h-full">

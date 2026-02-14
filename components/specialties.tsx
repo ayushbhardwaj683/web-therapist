@@ -34,7 +34,8 @@ export default function Specialties() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[90rem] mx-auto">
         {specialties.map((item, index) => (
-          <ScrollAnimator key={index} delay={index * 100} className="h-full">
+          <div className="h-full">
+          <ScrollAnimator key={index} delay={index * 100} >
             <div className="flex flex-col justify-between h-full min-h-[600px] p-8 border border-[#3B3632]/20 bg-[#dcd8d0] hover:bg-[#E8E4DE] transition-colors duration-300">
               
               <div>
@@ -58,6 +59,7 @@ export default function Specialties() {
               
             </div>
           </ScrollAnimator>
+          </div>
         ))}
       </div>
     </section>
