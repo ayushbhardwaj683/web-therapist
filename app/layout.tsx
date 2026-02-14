@@ -1,14 +1,27 @@
+
+
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-
+import { Fraunces, Mulish } from 'next/font/google'
 import './globals.css'
+import { cn } from '@/lib/utils'
 
-const _geist = Geist({ subsets: ['latin'] })
-const _geistMono = Geist_Mono({ subsets: ['latin'] })
+
+const fraunces = Fraunces({ 
+  subsets: ['latin'],
+  variable: '--font-fraunces',
+  display: 'swap',
+})
+
+
+const mulish = Mulish({ 
+  subsets: ['latin'], 
+  variable: '--font-mulish',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Therapy App',
+  description: 'Connect with a therapist and get the support you need.',
   generator: 'v0.app',
 }
 
@@ -19,7 +32,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+      <body className={cn(
+        fraunces.variable,
+        mulish.variable,
+        "font-sans antialiased bg-[#F0ECE6] text-[#2E2C2A]"
+      )}>
+        {children}
+      </body>
     </html>
   )
 }
+
+

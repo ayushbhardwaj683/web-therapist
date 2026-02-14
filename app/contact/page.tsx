@@ -12,13 +12,13 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="bg-neutral-50">
+    <main className="bg-[#F0ECE6]">
       <Header />
       <div className="pt-24 md:pt-28" />
       <LetsConnect />
-      <SocialLinks />
       <BookAppointment />
       <MyOffice />
+      <SocialLinks />
       <ContactFooter />
     </main>
   )

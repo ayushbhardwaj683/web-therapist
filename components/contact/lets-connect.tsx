@@ -1,55 +1,57 @@
+
+
+
 'use client'
 
 import ScrollAnimator from '../scroll-animator'
-import ImagePlaceholder from '../image-placeholder'
 
 export default function LetsConnect() {
   return (
-    <section className="bg-blue-200 py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-8">
-        <ScrollAnimator>
-          <h2 className="text-6xl md:text-7xl font-serif font-bold text-green-900 mb-12">
-            Let's Connect
-          </h2>
-        </ScrollAnimator>
+    <section className="bg-[#F0ECE6] pt-0 pb-24 md:pb-32 text-[#3B3632]">
+      <div className="max-w-[90rem] mx-auto px-6 md:px-12 lg:px-24">
+        
+        
+        <div className="pt-16 md:pt-20">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          {/* Left - Text and Image Placeholders */}
-          <ScrollAnimator>
-            <div>
-              <p className="text-lg text-neutral-800 mb-8">
-                Starting therapy is courageous.
-              </p>
-              <p className="text-base text-neutral-700 mb-16 leading-relaxed max-w-sm">
-                Get in touch for questions, or to book a free 15-minute consultation.
-              </p>
+          <ScrollAnimator>  
+            <h2 className="text-6xl md:text-7xl lg:text-8xl font-serif font-bold mb-10 text-left">
+              Let's Connect
+            </h2>
+          </ScrollAnimator>
 
-              {/* Overlapping circular images */}
-              <div className="relative h-72 w-80">
-                <div className="absolute top-0 left-0 z-10">
-                  <ImagePlaceholder 
-                    className="w-72 h-72"
-                    rounded="full"
+          <div className="flex flex-col gap-16">
+
+            <ScrollAnimator className="w-full">
+              <div className="space-y-8 max-w-5xl">
+
+               
+                <p className="text-xl md:text-2xl text-[#3B3632]">
+                  Starting therapy is a meaningful step.
+                </p>
+
+                
+                <p className="text-2xl md:text-3xl leading-relaxed font-light text-[#3B3632]">
+                  If you have questions or would like to schedule a consultation, 
+                  you’re welcome to reach out to begin a conversation about what 
+                  support could look like for you.
+                </p>
+
+         
+                <div className="relative w-[211px] h-[317px] rounded-t-[10rem] rounded-b-none overflow-hidden border border-[#3B3632]/10 shadow-xl mt-12">
+                  
+                  <div className="absolute inset-0 bg-[#3B3632]/5 mix-blend-multiply z-10 pointer-events-none"></div>
+                  
+                  <img
+                    src="/Dr. Maya Reynolds.png"
+                    alt="Portrait of Dr. Maya Reynolds"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <div className="absolute bottom-0 right-0 z-0">
-                  <ImagePlaceholder 
-                    className="w-56 h-56"
-                    rounded="full"
-                  />
-                </div>
+
               </div>
-            </div>
-          </ScrollAnimator>
+            </ScrollAnimator>
 
-          {/* Right - Dark Green Info Box */}
-          <ScrollAnimator delay={100}>
-            <div className="bg-green-800 p-8 md:p-12 text-white rounded-lg min-h-96 flex items-center">
-              <p className="text-base leading-relaxed font-light">
-                <span className="font-semibold">PLEASE NOTE:</span> If you opt to use a "Form Block" on your contact page this is not HIPAA-compliant. Squarespace stores data that is input into forms in the Marketing tab under Profiles. Instead, you can embed a HIPAA-compliant form, a link to your client portal, or simply put your email address.
-              </p>
-            </div>
-          </ScrollAnimator>
+          </div>
         </div>
       </div>
     </section>

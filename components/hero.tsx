@@ -1,50 +1,62 @@
+
+
+
+
 'use client'
 
 import ScrollAnimator from './scroll-animator'
 
 export default function Hero() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen bg-neutral-50">
-      {/* Left side - Content */}
-      <ScrollAnimator>
-        <div className="flex flex-col justify-center px-8 md:px-12 py-20 bg-neutral-100">
-          <h1 className="text-6xl md:text-7xl font-serif font-bold text-neutral-900 mb-12">
-            Live a fulfilling life.
-          </h1>
-          
-          <p className="text-lg text-neutral-700 mb-6 leading-relaxed max-w-md">
-            Life can be challenging—especially when you're trying to balance your personal and professional life.
-          </p>
-          
-          <p className="text-lg text-neutral-700 mb-12 leading-relaxed max-w-md">
-            It's easy to feel like you're alone in facing these challenges, but I want you to know that I'm here to help.
-          </p>
-          
-          <div className="w-full">
-            <button className="btn-lilac">
-              GET IN TOUCH →
-            </button>
+    <section className="flex flex-col-reverse md:grid md:grid-cols-2 min-h-screen bg-[#F0ECE6]">
+ 
+      
+      <div className="flex flex-col justify-between bg-[#dcd8d0] relative">
+        
+        <ScrollAnimator>
+          <div className="px-8 md:px-20 py-20 flex flex-col justify-center h-full">
+            <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#3B3632] mb-8 md:mb-12">
+              Find steadiness, even when life feels overwhelming.
+            </h1>
+            
+            <p className="text-lg text-[#2E2C2A] mb-6 leading-relaxed max-w-md">
+              You may be high-achieving and capable on the outside—yet privately carrying anxiety, burnout, or the weight of past experiences that still shape how you move through the world.
+            </p>
+            
+            <p className="text-lg text-[#2E2C2A] leading-relaxed max-w-md">
+              Therapy can be a grounded space to slow down, reconnect with yourself, and build resilience in a way that feels steady, intentional, and sustainable.
+            </p>
           </div>
-        </div>
-      </ScrollAnimator>
+        </ScrollAnimator>
 
-      {/* Right side - Square Image Placeholder */}
-      <ScrollAnimator delay={100}>
-        <div className="relative bg-white flex items-center justify-center overflow-hidden min-h-96 md:min-h-screen p-8">
-          <div className="w-full max-w-md h-96 md:h-full md:max-h-96 bg-neutral-300 flex items-center justify-center text-neutral-500 font-medium rounded-lg">
-            {/* 
-              ADD IMAGE HERE:
-              Replace the placeholder with your image:
-              <img 
-                src="/images/hero-image.jpg" 
-                alt="Live a fulfilling life" 
-                className="w-full h-full object-cover rounded-lg"
-              />
-            */}
-            Image Placeholder
-          </div>
+        <ScrollAnimator delay={200}>
+          <a 
+            href="#contact" 
+            className="block w-full border-t border-[#3B3632] text-[#3B3632] hover:bg-[#3B3632] hover:text-[#F0ECE6] py-6 md:py-8 px-8 md:px-20 transition-all duration-300 group"
+          >
+            <div className="flex items-center justify-center gap-3 text-sm font-bold tracking-[0.2em] uppercase">
+              Get In Touch 
+              <span className="transition-transform duration-300 group-hover:translate-x-2">→</span>
+            </div>
+          </a>
+        </ScrollAnimator>
+      </div>
+
+      <ScrollAnimator delay={100} className="h-full w-full">
+        <div className="relative w-full h-[400px] md:h-full bg-[#E6E2DC]">
+          <img 
+            src="/fulfilling.jpg" 
+            alt="A surfer walking into the ocean at sunset"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
         </div>
       </ScrollAnimator>
     </section>
   )
 }
+
+
+
+
+
+

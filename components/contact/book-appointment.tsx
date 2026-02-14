@@ -1,44 +1,35 @@
+
+
+
 'use client'
 
 import ScrollAnimator from '../scroll-animator'
 
 export default function BookAppointment() {
   return (
-    <section className="bg-neutral-50 py-24 md:py-32">
-      <div className="max-w-5xl mx-auto px-8">
+    <section className="bg-[#dcd8d0] py-24 md:py-32 text-[#3B3632]">
+      <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
+
         <ScrollAnimator>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center text-neutral-900 mb-6">
-            Book an appointment.
+          <h2 className="text-5xl md:text-6xl font-serif font-bold mb-8">
+            Book an Appointment
           </h2>
-          <p className="text-center text-neutral-700 mb-16 max-w-2xl mx-auto leading-relaxed">
-            Add some text here if you like, and add your scheduling widget below you can get one by signing up for a scheduling account through Squarespace, the top-tier plan is HIPAA compliant OR you can use your own portal.
+
+          <p className="text-lg md:text-xl leading-relaxed mb-10 font-light">
+            Beginning therapy is a meaningful step. I offer in-person sessions in Santa Monica 
+            as well as secure telehealth appointments across California. Whether you're 
+            navigating anxiety, burnout, trauma, or ongoing stress, we can start with a 
+            15-minute consultation to explore whether working together feels like the right fit.
           </p>
+
+          
+          <button className="border border-[#3B3632] text-[#3B3632] px-10 py-4 tracking-wide transition-all duration-300 hover:bg-[#3B3632] hover:text-white">
+            SCHEDULE A CONSULTATION
+          </button>
         </ScrollAnimator>
 
-        <ScrollAnimator>
-          <div className="flex items-center justify-center min-h-96">
-            <div className="bg-white border border-neutral-300 rounded-lg p-12 text-center max-w-lg">
-              <h3 className="text-2xl font-serif font-bold text-neutral-900 mb-4">
-                This page is not active
-              </h3>
-              <p className="text-sm text-neutral-700 mb-8">
-                If you're the owner, please log into your account to start a free trial or subscribe.
-              </p>
-              <button className="bg-neutral-900 text-white px-8 py-3 rounded hover:bg-neutral-800 transition-colors font-semibold tracking-wide">
-                GO TO ACCOUNT
-              </button>
-            </div>
-          </div>
-        </ScrollAnimator>
-
-        <div className="mt-16 pt-12 border-t border-neutral-200">
-          <ScrollAnimator>
-            <p className="text-center text-sm text-neutral-600">
-              Powered by <span className="font-medium">monthly scheduling</span>
-            </p>
-          </ScrollAnimator>
-        </div>
       </div>
     </section>
   )
 }
+

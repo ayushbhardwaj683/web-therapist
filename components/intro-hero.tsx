@@ -1,46 +1,90 @@
+
 'use client'
 
 import ScrollAnimator from './scroll-animator'
 
 export default function IntroHero() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen bg-neutral-50">
-      {/* Left side - Circular Image Placeholder */}
-      <ScrollAnimator>
-        <div className="relative bg-white flex items-center justify-center overflow-hidden min-h-96 md:min-h-screen">
-          <div className="relative z-10 w-80 md:w-96 h-80 md:h-96 rounded-full bg-neutral-300 flex items-center justify-center text-neutral-500 font-medium overflow-hidden">
-            {/* 
-              ADD IMAGE HERE:
-              Replace the placeholder with your image:
-              <img 
-                src="/images/intro-hero.jpg" 
-                alt="Live your life in full bloom" 
+    <section
+      className="bg-[#F0ECE6] pb-24 lg:pb-0"
+      style={{ paddingTop: '90px' }}
+    >
+      <div className="max-w-7xl mx-auto w-full px-6 lg:px-8">
+
+        <div className="flex flex-col items-center lg:flex-row lg:items-center gap-16 lg:gap-32">
+
+
+          <ScrollAnimator>
+            <div
+              className="
+                relative 
+                rounded-t-full 
+                overflow-hidden 
+                flex-shrink-0
+                w-[70vw] 
+                max-w-[420px]
+                sm:w-[55vw]
+                lg:w-[32vw] 
+                lg:max-w-[520px]
+                aspect-[2/3]
+                mx-auto
+                lg:ml-[-40px]
+              "
+            >
+              <img
+                src="/landing.jpg"
+                alt="Calm coastal still life with shells"
                 className="w-full h-full object-cover"
               />
-            */}
-            Image Placeholder
-          </div>
-        </div>
-      </ScrollAnimator>
+            </div>
+          </ScrollAnimator>
 
-      {/* Right side - Content */}
-      <ScrollAnimator delay={100}>
-        <div className="flex flex-col justify-center px-8 md:px-12 py-20">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-neutral-900 mb-6">
-            Live your life in full bloom
-          </h1>
-          
-          <p className="text-lg text-neutral-700 mb-12 leading-relaxed">
-            Therapy for Adults in Minneapolis, MN.
-          </p>
-          
-          <div className="w-full">
-            <button className="btn-lilac">
-              CONNECT WITH ME →
-            </button>
-          </div>
+          <ScrollAnimator delay={100}>
+            <div className="w-full max-w-xl text-center lg:text-left mx-auto lg:mx-0 lg:ml-20">
+
+              <h1 className="
+                text-4xl 
+                sm:text-5xl 
+                md:text-6xl 
+                lg:text-7xl 
+                font-serif 
+                leading-[1.05] 
+                text-[#3B3632] 
+                mb-10
+              ">
+                A grounded space<br />
+                to begin again
+              </h1>
+
+              <div className="flex flex-col items-center lg:items-start max-w-md mx-auto lg:mx-0">
+
+                <p className="text-base sm:text-lg text-[#2E2C2A] mb-8 leading-relaxed text-center lg:text-left">
+                  Therapy for adults in Santa Monica, CA — supporting anxiety, trauma, and burnout with warmth, depth, and practical tools.
+                </p>
+
+                <button
+                  className="
+                    border 
+                    border-[#3B3632] 
+                    text-[#3B3632] 
+                    px-8 sm:px-10 
+                    py-3 sm:py-4 
+                    tracking-wide 
+                    hover:bg-[#3B3632] 
+                    hover:text-white 
+                    transition duration-300
+                  "
+                >
+                  CONNECT WITH ME →
+                </button>
+
+              </div>
+
+            </div>
+          </ScrollAnimator>
+
         </div>
-      </ScrollAnimator>
+      </div>
     </section>
   )
 }

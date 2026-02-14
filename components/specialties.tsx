@@ -2,52 +2,63 @@
 
 import ScrollAnimator from './scroll-animator'
 
-export default function Specialties() {
-  const specialties = [
-    {
-      title: "Self-Esteem",
-      description: "Building a strong sense of self-worth is key to living a fulfilled life. Let's work together to bolster your self-esteem.",
-    },
-    {
-      title: "Relationships",
-      description: "Navigating relationships can be complex. I'm here to guide you through these complexities to help you form healthier connections.",
-    },
-    {
-      title: "Burnout",
-      description: "Feeling overwhelmed by your career is more common than you think. Together, we'll identify strategies to manage and prevent burnout.",
-    }
-  ]
+const specialties = [
+  {
+    title: "Anxiety & High Internal Pressure",
+    description: "You may appear composed and capable, yet internally feel stuck in overthinking, tension, or constant self-criticism. Together, we’ll work to understand the emotional and physiological patterns driving anxiety and help you feel more regulated and grounded in daily life.",
+    image: "/self_esteem.jpg",
+    alt: "Person standing alone near a window in a quiet room"
+  },
+  {
+    title: "Trauma & Emotional Safety",
+    description: "Past experiences—whether a single event or long-standing relational patterns—can quietly shape how safe you feel in the world. I offer carefully paced trauma work that prioritizes stabilization, safety, and helping you reconnect with a stronger sense of self.",
+    image: "/relationship.jpg",
+    alt: "Person with hands raised against glass, symbolizing emotional barriers"
+  },
+  {
+    title: "Burnout & Chronic Stress",
+    description: "Many high-achieving professionals and creatives feel exhausted from years of pushing through stress. Therapy can become a space to slow down, rebuild resilience, and develop more sustainable ways of living and working without sacrificing your well-being.",
+    image: "/burnout.jpg",
+    alt: "Silhouette of a person sitting alone in a dim hallway"
+  }
+]
 
+export default function Specialties() {
   return (
-    <section className="bg-neutral-50 py-24">
-      <div className="max-w-7xl mx-auto px-8">
-        <ScrollAnimator>
-          <h2 className="text-6xl font-serif font-bold text-center text-neutral-900 mb-20">
-            My Specialties
-          </h2>
-        </ScrollAnimator>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {specialties.map((specialty, index) => (
-            <ScrollAnimator key={index} delay={index * 100}>
-              <div className="border border-neutral-400 p-8 bg-neutral-100">
-                <h3 className="text-2xl font-serif font-bold text-neutral-900 mb-6">
-                  {specialty.title}
+    <section className="py-24 px-4 md:px-8 bg-[#F0ECE6] text-[#3B3632]">
+      <ScrollAnimator>
+        <h2 className="text-4xl md:text-6xl font-serif font-bold text-center mb-16">
+          My Specialties
+        </h2>
+      </ScrollAnimator>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[90rem] mx-auto">
+        {specialties.map((item, index) => (
+          <ScrollAnimator key={index} delay={index * 100} className="h-full">
+            <div className="flex flex-col justify-between h-full min-h-[600px] p-8 border border-[#3B3632]/20 bg-[#dcd8d0] hover:bg-[#E8E4DE] transition-colors duration-300">
+              
+              <div>
+                <h3 className="text-3xl font-serif font-bold mb-6 text-[#3B3632]">
+                  {item.title}
                 </h3>
-                
-                <p className="text-neutral-700 mb-8 leading-relaxed">
-                  {specialty.description}
+                <p className="text-base text-[#2E2C2A] leading-relaxed mb-8">
+                  {item.description}
                 </p>
-                
-                <div className="w-48 h-48 rounded-full overflow-hidden mx-auto bg-neutral-300">
-                  <div className="w-full h-full flex items-center justify-center text-neutral-500 font-medium text-sm">
-                    Image Placeholder
-                  </div>
+              </div>
+
+              <div className="w-full flex justify-center mt-auto">
+                <div className="w-72 h-72 md:w-80 md:h-80 relative rounded-full overflow-hidden border-2 border-[#E8E4DE] shadow-sm">
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
-            </ScrollAnimator>
-          ))}
-        </div>
+              
+            </div>
+          </ScrollAnimator>
+        ))}
       </div>
     </section>
   )
