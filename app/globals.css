@@ -1,0 +1,63 @@
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  :root {
+    --background: 36 18% 92%; 
+    --foreground: 24 5% 17%; 
+    
+    
+    --theme-clay: #9C5F4B;
+    --theme-bone: #F0ECE6;
+    --theme-silt: #3B3632;
+    --theme-amber: #D6A66C;
+  }
+}
+  body {
+    font-family: var(--font-mulish), sans-serif;
+    background-color: #F0ECE6; 
+    color: #2E2C2A; 
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-fraunces), serif;
+    color: #3B3632; 
+  }
+}
+
+@layer components {
+  
+  .btn-lilac {
+    @apply border border-[#9C5F4B] px-8 py-4 text-[#9C5F4B] font-medium tracking-widest transition-all duration-300 hover:bg-[#9C5F4B] hover:text-[#F0ECE6] hover:border-[#9C5F4B];
+  }
+
+  .image-placeholder {
+    @apply bg-[#E6E2DC] w-full h-96 rounded-sm flex items-center justify-center text-[#75706B] font-medium;
+  }
+
+  
+  .fade-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  .fade-in-delay-1 { animation-delay: 0.1s; }
+  .fade-in-delay-2 { animation-delay: 0.2s; }
+  .fade-in-delay-3 { animation-delay: 0.3s; }
+  .fade-in-delay-4 { animation-delay: 0.4s; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
