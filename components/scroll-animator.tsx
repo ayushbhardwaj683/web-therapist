@@ -1,40 +1,31 @@
+
+
+
 'use client'
 
-import { useEffect, useRef, ReactNode } from 'react'
+import { ReactNode } from 'react'
+import { motion } from 'framer-motion'
 
 interface ScrollAnimatorProps {
   children: ReactNode
+  className?: string
   delay?: number
 }
 
-export default function ScrollAnimator({ children, delay = 0 }: ScrollAnimatorProps) {
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            if (ref.current) {
-              ref.current.classList.add('fade-in')
-            }
-          }, delay)
-          observer.unobserve(entry.target)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [delay])
-
+export default function ScrollAnimator({
+  children,
+  className = '',
+  delay = 0,
+}: ScrollAnimatorProps) {
   return (
-    <div ref={ref} className="opacity-0">
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: delay / 1000 }}
+      viewport={{ once: true }}
+    >
       {children}
-    </div>
+    </motion.div>
   )
 }

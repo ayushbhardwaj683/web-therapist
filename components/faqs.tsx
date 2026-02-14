@@ -1,3 +1,6 @@
+
+
+
 'use client'
 
 import { useState } from 'react'
@@ -34,25 +37,21 @@ export default function Faqs() {
       <div className="max-w-[90rem] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start">
           
-          {/* Left - Arch Image */}
-          <div className="order-2 md:order-1 w-full flex justify-center md:justify-start">
-          <ScrollAnimator >
-            <div className="relative w-full md:max-w-md h-[500px] md:h-[650px] rounded-t-[12rem] md:rounded-t-full rounded-b-none overflow-hidden shadow-lg border border-[#3B3632]/10">
-              
-              <div className="absolute inset-0 bg-[#3B3632]/5 mix-blend-multiply z-10 pointer-events-none"></div>
-              
-              <img 
-                src="/FAQ.jpg" 
-                alt="Vase with flowers in calm light" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </ScrollAnimator></div>
 
+            <ScrollAnimator className="w-full flex justify-center md:justify-start">
+              <div className="relative w-full md:max-w-md h-[500px] md:h-[650px] rounded-t-[12rem] md:rounded-t-full rounded-b-none overflow-hidden shadow-lg border border-[#3B3632]/10">
+                
+                <div className="absolute inset-0 bg-[#3B3632]/5 mix-blend-multiply z-10 pointer-events-none"></div>
+                
+                <img 
+                  src="/FAQ.jpg" 
+                  alt="Vase with flowers in calm light" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </ScrollAnimator>
 
-          {/* Right - FAQs Content */}
-          <div className="order-1 md:order-2 flex flex-col h-full">
-            <ScrollAnimator delay={100}>
+            <ScrollAnimator delay={100}  className="flex flex-col h-full">
               <h2 className="text-5xl md:text-6xl font-serif font-bold text-[#3B3632] mb-12 md:mb-16">
                 FAQs
               </h2>
@@ -64,16 +63,13 @@ export default function Faqs() {
                       onClick={() => setExpanded(expanded === index ? null : index)}
                       className="w-full flex items-center justify-start gap-6 py-8 text-left group transition-all duration-300"
                     >
-            
                       <div className="relative w-5 h-5 flex items-center justify-center">
-                        
                         <span className="absolute w-5 h-[1.5px] bg-[#9C5F4B]"></span>
                         <span
                           className={`absolute w-5 h-[1.5px] bg-[#9C5F4B] transition-transform duration-300 ease-in-out ${
                             expanded === index ? 'rotate-0' : 'rotate-90'
                           }`}
                         ></span>
-
                       </div>
 
                       <span className="text-xl md:text-2xl font-serif text-[#3B3632] group-hover:text-[#9C5F4B] transition-colors duration-300">
@@ -94,10 +90,10 @@ export default function Faqs() {
                 ))}
               </div>
             </ScrollAnimator>
-          </div>
 
         </div>
       </div>
     </section>
   )
 }
+
